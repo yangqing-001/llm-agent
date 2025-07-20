@@ -1,14 +1,21 @@
 import asyncio
 from langchain_mcp_adapters.client import MultiServerMCPClient
 from langgraph.prebuilt import create_react_agent
-from langchain_ollama import ChatOllama
+# from langchain_ollama import ChatOllama
+from langchain_openai import ChatOpenAI
 
-# 初始化 Ollama 大模型客户端
-llm = ChatOllama(
-    model="llama3.2",  # 使用支持工具调用的模型
-    base_url="http://localhost:11434",  # Ollama 服务地址
-    temperature=0.7
+llm = ChatOpenAI(
+    model="qwen-max",  # 指定千问模型
+    temperature=0,
+    api_key="sk-7b957493cc324362b63a95bcd09ef189",  # 确保环境变量正确
+    base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"  # 兼容模式端点
 )
+# 初始化 Ollama 大模型客户端
+# llm = ChatOllama(
+#     model="llama3.2",  # 使用支持工具调用的模型
+#     base_url="http://localhost:11434",  # Ollama 服务地址
+#     temperature=0.7
+# )
 
 # 解析并输出结果
 def print_optimized_result(agent_response):

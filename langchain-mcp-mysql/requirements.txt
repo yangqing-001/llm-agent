@@ -1,0 +1,34 @@
+
+
+# 核心LangChain框架
+langchain>=0.3.0,<0.4.0
+langchain-core>=0.3.0,<0.4.0
+
+# LangGraph - ReAct Agent支持
+langgraph>=0.5.0,<0.6.0
+
+# MCP集成适配器
+langchain-mcp-adapters>=0.1.0,<0.2.0
+
+# Ollama集成（替代DeepSeek）
+langchain-ollama>=0.3.0,<0.4.0
+
+# OpenAI集成
+langchain-openai>=0.3.0,<0.4.0
+
+# FastMCP框架
+fastmcp>=2.0.0,<3.0.0
+
+# MCP协议核心
+mcp>=1.9.0,<2.0.0
+
+# 基础依赖
+pydantic>=2.0.0,<3.0.0
+httpx>=0.25.0,<1.0.0
+anyio>=4.0.0,<5.0.0
+
+# MySQL数据库连接器
+PyMySQL>=1.1.0,<2.0.0
+
+# 环境变量管理
+python-dotenv>=1.0.0,<2.0.0
